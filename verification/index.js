@@ -37,9 +37,12 @@
 
 'use strict';
 
-var fs = require('fs');
-var express = require('express');
-var app = express();
+const fs = require('fs');
+const express = require('express');
+const app = express();
+const cors = require('cors')
+
+app.use(cors());
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
